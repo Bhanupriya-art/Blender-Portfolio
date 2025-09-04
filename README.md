@@ -148,19 +148,16 @@ This portfolio represents the convergence of multiple disciplines:
 - **Audio**: Carefully selected royalty-free music and custom-recorded piano samples
 - **Textures**: Combination of procedurally generated and photographed materials
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
 ## 🌟 Connect & Explore
 
-Experience the full interactive portfolio at **[your-portfolio-url.com](https://your-portfolio-url.com)**
+Experience the full interactive portfolio at **[your-portfolio-url.com](https://blender-portfolio-nu.vercel.app/)**
 
 ### Get in Touch
-- **Portfolio**: [Live Demo](https://your-portfolio-url.com)
-- **Email**: your.email@example.com  
+- **Portfolio**: [Live Demo](https://blender-portfolio-nu.vercel.app/)
+- **Email**: brana2k5@gmail.com  
 - **LinkedIn**: [Your Professional Profile](https://linkedin.com/in/bhanupriya086)
 
 ---
