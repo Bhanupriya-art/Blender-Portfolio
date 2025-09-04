@@ -1,6 +1,7 @@
 # 3D Interactive Portfolio - Virtual Room Experience
 
-An immersive virtual room portfolio that invites visitors to explore my work through interactive 3D experiences. Step into a beautifully crafted digital space where software engineering meets creative design, featuring custom-modeled environments, dynamic lighting, and engaging interactions that bring projects to life.
+An immersive virtual room portfolio that invites visitors to explore my work through interactive 3D experiences. Step into a beautifully crafted digital space where software engineering meets creative design, featuring custom-modeled environments, dynamic lighting, and engaging interactions that bring projects to life.<br><br>
+<img width="870" height="710" alt="Screenshot 2025-09-05 024536" src="https://github.com/user-attachments/assets/fa41118a-0136-4065-9d5a-51eef66be2d7" />
 
 ## ✨ Features
 
@@ -44,6 +45,13 @@ An immersive virtual room portfolio that invites visitors to explore my work thr
 - **[OrbitControls](https://threejs.org/docs/#examples/en/controls/OrbitControls)** - Smooth camera navigation controls
 - **GLSL Shaders** - Custom vertex and fragment shaders for visual effects
 - **TailwindCSS** - Utility-first CSS framework for responsive UI components
+
+## ScreenShots
+<img width="540" height="490" alt="Screenshot 2025-09-05 024536" src="https://github.com/user-attachments/assets/0731fd69-52d1-425a-9fd4-5b248996837f" />
+<img width="540" height="490" alt="Screenshot 2025-09-05 024546" src="https://github.com/user-attachments/assets/0f1b52c5-48cb-430f-b9a2-ae1269f221f5" />
+<img width="540" height="490" alt="Screenshot 2025-09-05 024612" src="https://github.com/user-attachments/assets/b5279559-289b-40cd-b2d3-33c07bbc6f9e" />
+<img width="540" height="490" alt="Screenshot 2025-09-05 024640" src="https://github.com/user-attachments/assets/a3f1d732-42ea-4f26-bc2b-e0a950a12021" />
+<img width="540" height="490" alt="Screenshot 2025-09-05 024630" src="https://github.com/user-attachments/assets/bfbde03f-53aa-4bea-9590-e1d5cd372119" />
 
 ## 🚀 Installation & Setup
 
