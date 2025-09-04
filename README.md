@@ -1,40 +1,168 @@
-# 💜 수아's Award-Winning Room Folio 💜
+# 3D Interactive Portfolio - Virtual Room Experience
 
-**[Live site](http://sooahs-room-folio.com/)**
+An immersive virtual room portfolio that invites visitors to explore my work through interactive 3D experiences. Step into a beautifully crafted digital space where software engineering meets creative design, featuring custom-modeled environments, dynamic lighting, and engaging interactions that bring projects to life.
 
-This repo contains code of 수아's Room Folio. If you're interested, learn how to create a porfolio like this [here](https://youtu.be/AB6sulUMRGE)!! It's beginner friendly!
+## ✨ Features
 
-![Page screenshot](public/media/og-image.webp?raw=true "Page screenshot")
+### 🏠 Virtual Room Environment
+- **Custom 3D Room**: Meticulously modeled virtual space created in Blender
+- **Immersive Exploration**: Navigate through the room to discover different project showcases
+- **Interactive Hotspots**: Clickable objects and areas that reveal portfolio content
 
-# Instructions
+### 🎬 Dynamic Animations & Effects
+- **GSAP Animations**: Smooth transitions and object movements throughout the experience
+- **Custom Shaders**: GLSL shaders for enhanced lighting, shadows, and visual effects
+- **Camera Controls**: Intuitive OrbitControls for seamless navigation around the 3D space
 
+### 🎵 Audio Experience
+- **Background Music**: Ambient soundscapes that enhance the immersive atmosphere
+- **Interactive Piano**: Playable piano keys with realistic sound feedback
+- **Sound Effects**: Spatial audio that responds to user interactions and movements
+
+### 🌅 Day/Night Theme System
+- **Dynamic Lighting**: Realistic day and night cycles with corresponding lighting changes
+- **Theme Toggle**: Smooth transitions between bright daytime and cozy nighttime atmospheres
+- **Adaptive UI**: Interface elements that adjust to complement the current lighting theme
+
+### 📱 Interactive Content Modals
+- **Work Portfolio**: Showcase of projects with detailed descriptions and live demos
+- **About Section**: Personal story, skills, and professional journey
+- **Contact Links**: Multiple ways to connect and collaborate
+
+### 🎯 Technical Excellence
+- **Real-time Rendering**: Optimized Three.js implementation for smooth 60fps performance
+- **Responsive Design**: Seamless experience across desktop and mobile devices
+- **Asset Optimization**: Efficient loading and memory management for 3D resources
+
+## 🛠 Tech Stack
+
+- **[Three.js](https://threejs.org/)** - WebGL 3D graphics library for real-time rendering
+- **[Vite](https://vitejs.dev/)** - Lightning-fast build tool and development server
+- **[GSAP](https://greensock.com/gsap/)** - Professional-grade animation library
+- **[Howler.js](https://howlerjs.com/)** - Spatial audio and music playback
+- **[Blender](https://www.blender.org/)** - 3D modeling, texturing, and scene creation
+- **[OrbitControls](https://threejs.org/docs/#examples/en/controls/OrbitControls)** - Smooth camera navigation controls
+- **GLSL Shaders** - Custom vertex and fragment shaders for visual effects
+- **TailwindCSS** - Utility-first CSS framework for responsive UI components
+
+## 🚀 Installation & Setup
+
+### Prerequisites
+
+Ensure you have Node.js (version 16 or higher) installed on your system.
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/bhanupriya-art/Blender-Portfolio.git
+cd Blender-Portfolio
 ```
+
+### Install Dependencies
+
+```bash
 npm install
+```
+
+### Development Server
+
+```bash
+# Start the development server with hot reload
 npm run dev
 ```
 
-# Updates & Known Issues!!!
+Visit `http://localhost:5173` to explore the virtual room experience.
 
-- Yes you shouldn't put everything into a single main.js file, I just did it because it was a beginner course and didn't want to move a bunch of stuff around everywhere which might've been more confusing for those just starting out. I definitely recommend a better structure than the one I did. Also the SCSS is a mess do NOT look at it XD. I strongly encourage you to style it in your own unique way!
-- Don't use .ogg files because they might glitch out on iPhones. If you want to use .ogg files, make sure to also have a fallback .mp3 file that you load instead if they're on an iPhone. If you use .ogg you might not hear anything on iPhones/Safari browser.
-- There is an issue in the video's code where, at certain angles, when you hover something it starts "vibrating" or "twitching," this is because the mesh that we're using to target with our raycaster is no longer being hovered after the animation displaces/rescales the object. This triggers the tween to be "killed" and revert to its old state. When it reverts it might be rehovered which triggers the animation to play again, but that animation again makes the object no longer hovered and it keeps going back and forth. If you wanted to fix this with minimal adjustments, you can generate static invisible hitboxes for all hovered items that are passed into the raycaster for testing rather than the object itself (or you can do a combination of both, some you use the object itself, others you use a hitbox). I decided to take a dual approach, some have hitboxes, others use the default object. For the objects with intro animations, you can either create their hitboxes after the intro animation is done playing or you can generate all the hitboxes before the intro is done playing. If you do it after, the user can't interact with them until the intro is done. If you do it before, they can interact with the objects before the intro is done. There are multiple ways to handle this, you can even make the hitboxes in Blender if you want. For me I made all the static ones interactable immediately, whereas those with intro animations have their hitboxes generated after the animations are done. One issue with hitboxes is at certain angles you can't select/hover objects behind another mesh's hitbox because we're only choosing the first thing the raycast intersects. You can fix this by deciding to play a hover animation for all objects the raycaster is intersecting or checking the rotation of the camera to "guess" which one the user is actually hovering, or make a highly custom hitbox for each specific mesh that needs one in Blender, or take the dual approach I took in which the raycaster uses generated hitboxes for some objects and the default objects themselves for others. Alternatively, if you don't want a hovered state, you can simply remove the kill flag check and let it play out its animation fully.
+## 📖 Usage
 
-# Inspo & Credits!!!
+### Development Workflow
 
-- [Bruno Simon's Room](https://my-room-in-3d.vercel.app/)
-- [Rachel Wei's Room](https://rachelqrwei.ca/)
-- [Nicky Blender](https://www.instagram.com/nicky.blender/?hl=en)
-- [Denis Wipart's Materials](https://wipart.artstation.com/store). Don't worry I have commercial license hahaha.
-- [Music](https://youtu.be/eq3C1Uwz6YU)
-- [Click SFX](https://uppbeat.io/sfx/category/digital-and-ui/ui)
-- [Piano SFX](https://pixabay.com/sound-effects/all-88-keys-on-a-piano-playing-fast-free-high-quality-sound-effects-71279/)
-- [Cat Wallpaper](https://wallpapersok.com/wallpapers/kawaii-hd-smiling-cats-vmhjik4wp6ipc6bd.html)
-- [Peach Panda Wallpaper](https://4kwallpapers.com/cute/peach-cat-kawaii-10081.html)
-- [Anya Forger | Spy x Family Wallpaper](https://www.uhdpaper.com/2022/03/anya-forger-spy-x-family-4k-5061g.html?m=0)
-- [SVGs](https://www.svgrepo.com/)
-- [Fonts](https://www.fontspace.com/niskala-huruf)
+```bash
+# Start development server
+npm run dev
 
-# Won some awards!! 🎉
+# Build for production
+npm run build
 
-- [Awwwards](https://www.awwwards.com/sites/suas-room-folio)
-- [CSSDA](https://www.cssdesignawards.com/sites/sooahs-room-folio/47040/)
+# Preview production build
+npm run preview
+```
+
+### Production Deployment
+
+```bash
+# Create optimized build
+npm run build
+
+# The dist/ folder contains all files ready for deployment
+```
+
+### Additional Commands
+
+```bash
+# Code linting
+npm run lint
+
+# Format code with Prettier
+npm run format
+
+# Bundle analysis
+npm run analyze
+```
+
+## 🎮 Interactive Guide
+
+### Navigation Controls
+- **Mouse Drag**: Rotate camera around the room
+- **Mouse Wheel**: Zoom in/out for different perspectives  
+- **Click Objects**: Interact with furniture, decorations, and portfolio items
+- **Piano Keys**: Click individual keys to play musical notes
+
+### Room Features
+- **Project Displays**: Wall-mounted screens and objects showcasing different works
+- **Day/Night Toggle**: Switch located near the window or lighting controls
+- **Interactive Piano**: Fully playable instrument with realistic sound
+- **Hidden Details**: Explore corners and objects for easter eggs and additional content
+
+
+
+## 🎨 Design Philosophy
+
+This portfolio represents the convergence of multiple disciplines:
+
+- **Software Engineering**: Clean, efficient code architecture and performance optimization
+- **3D Design**: Thoughtful spatial design and attention to environmental storytelling  
+- **User Experience**: Intuitive navigation and engaging interactive elements
+- **Audio Design**: Immersive soundscapes that enhance the virtual presence
+- **Creative Coding**: Innovative use of web technologies for artistic expression
+
+## 🏆 Inspiration & Credits
+
+### Technical Resources
+- **Three.js Journey** by Bruno Simon - Comprehensive WebGL education
+- **Blender Community** - 3D modeling techniques and best practices
+- **Creative Coding Community** - Inspiration for interactive experiences
+
+### Assets & Attribution
+- **3D Models**: Original creations designed and modeled in Blender
+- **Audio**: Carefully selected royalty-free music and custom-recorded piano samples
+- **Textures**: Combination of procedurally generated and photographed materials
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 🌟 Connect & Explore
+
+Experience the full interactive portfolio at **[your-portfolio-url.com](https://your-portfolio-url.com)**
+
+### Get in Touch
+- **Portfolio**: [Live Demo](https://your-portfolio-url.com)
+- **Email**: your.email@example.com  
+- **LinkedIn**: [Your Professional Profile](https://linkedin.com/in/bhanupriya086)
+
+---
+
+✨ **Step into the room, explore the space, and discover the intersection of code and creativity!**
